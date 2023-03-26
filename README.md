@@ -1,6 +1,9 @@
 A version of Jison with support for ES6 modules
 =====
 
+Install with `npm i jiwson -g`. Without `-g` option, the cli version
+goes to: `./node_module/.bin/jiwson`.
+
 Full cli option list:
 
     Usage: jiwson [file] [lexfile] [options]
@@ -16,7 +19,7 @@ Full cli option list:
        -p TYPE, --parser-type TYPE   The type of algorithm to use for the parser (lr0, slr, lalr, lr)
        -V, --version                 print version and exit
 
-E.g.:
+Fo example:
 
     jiwson ./path/to/grammar.bnf -m es6 -o my-parser.mjs
 
@@ -24,12 +27,12 @@ E.g.:
 Usage from a CommonJS module
 --------------------------
 
-You can generate parsers programatically from JavaScript as
-well. Assuming Jison is in your commonjs environment's load path:
+After `npm i jiwson`, you can generate parsers programatically from
+JavaScript as well.
 
 ```javascript
 // mygenerator.js
-var Parser = require("jison").Parser;
+var Parser = require("jiwson").Parser;
 
 // a grammar in JSON
 var grammar = {
@@ -65,7 +68,7 @@ Usage within ES6
 ----------------
 
 ```js
-import { Parser } from "./lib/jison.mjs";
+import { Parser } from "jiwson/lib/jison.mjs";
 
 // ... the rest is as above
 ```
