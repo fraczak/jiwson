@@ -1,7 +1,7 @@
 {
     "name": "jiwson",
-    "description": "A clone of Jison (by Zach Carter, http://zaa.ch)",
-    "version": "0.0.1",
+    "description": "A clone of Jison (by Zach Carter, http://zaa.ch), which adds support to ES6 modules",
+    "version": "0.1.0",
     "license": "MIT",
     "main": "lib/jison",
     "bin": "lib/cli.js",

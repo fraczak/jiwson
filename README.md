@@ -3,7 +3,7 @@ A version of Jison with support for ES6 modules
 
 Full cli option list:
 
-    Usage: jison [file] [lexfile] [options]
+    Usage: jiwson [file] [lexfile] [options]
 
     file        file containing a grammar
     lexfile     file containing a lexical grammar
@@ -15,6 +15,10 @@ Full cli option list:
        -m TYPE, --module-type TYPE   The type of module to generate (commonjs, amd, js, es6)
        -p TYPE, --parser-type TYPE   The type of algorithm to use for the parser (lr0, slr, lalr, lr)
        -V, --version                 print version and exit
+
+E.g.:
+
+    jiwson ./path/to/grammar.bnf -m es6 -o my-parser.mjs
 
 
 Usage from a CommonJS module
@@ -55,6 +59,15 @@ parser.parse("adfe34bc e82a");
 
 // throws lexical error
 parser.parse("adfe34bc zxg");
+```
+
+Usage within ES6
+----------------
+
+```js
+import { Parser } from "./lib/jison.mjs";
+
+// ... the rest is as above
 ```
 
 Original License
